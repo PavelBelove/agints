@@ -1,0 +1,26 @@
+# AGIntS skills lock — copy to your project root as .agints
+# Format: name@version [frozen]
+# frozen = skill is customized locally, skip updates from repo
+
+# ── core (always loaded, do not remove) ────────────────────────────
+using-agints@1.0.0
+brainstorming@1.0.0
+test-driven-development@1.0.0
+systematic-debugging@1.0.0
+writing-plans@1.0.0
+subagent-driven-development@1.0.0
+verification-before-completion@1.0.0
+
+# ── stack (uncomment what matches your project) ────────────────────
+# react@1.0.0
+# nextjs@1.0.0
+# typescript@1.0.0
+# fastapi@1.0.0
+# django@1.0.0
+# go@1.0.0
+# rust@1.0.0
+
+# ── task (add as needed) ───────────────────────────────────────────
+# graphql@1.0.0
+# docker@1.0.0
+# ci-cd@1.0.0
