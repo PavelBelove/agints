@@ -1,6 +1,7 @@
 ---
 name: using-agints
-description: Loaded at session start by Claude Code to enforce skill-before-action discipline, detect project stack, and route each task to the appropriate AGIntS skill. Invoke on every new conversation before any response, clarification, or action.
+description: "Use at the start of every conversation — detects project stack from
+  .agints and project files, routes tasks to appropriate AGIntS skills."
 ---
 
 SKILL    := using-agints
@@ -20,17 +21,14 @@ RULE 🔴 ABSOLUTE {
 
 ANTI_PATTERNS {
   FORBIDDEN := rationalize_skip_via {
-    "this is just a simple task"        → skills apply to simple tasks too
+    "this is just a simple/quick task or overkill" → skills apply regardless of perceived complexity
     "I need context first"              → skill_check precedes context gathering
     "let me explore codebase first"     → skills define HOW to explore
-    "this is a quick fix"               → quick ≠ skill-exempt
     "no skill covers this exactly"      → nearest skill still applies
-    "I remember the skill content"      → skills evolve; MUST re-invoke
+    "I remember/already loaded this skill" → skills evolve; reload if new task type detected
     "user said to just do it"           → instructions = WHAT, not HOW
     "this doesn't count as a task"      → action = task; check always
     "I'll check after one small step"   → check BEFORE first step
-    "the skill is overkill here"        → simple tasks become complex; use it
-    "I already loaded this skill"       → reload if new task type detected
   }
 }
 
@@ -38,7 +36,7 @@ ANTI_PATTERNS {
 
 STACK_DETECT {
   TRIGGER := session_start
-  STEP_1  := read(.agints) IF exists
+  STEP_1  := read(.agints) IF exists  # skills lock file
   STEP_2  := scan_project_files {
     package.json ∋ "react"              → load(stack/react)
     package.json ∋ "next"               → load(stack/nextjs)
@@ -82,8 +80,7 @@ SKILL_PRIORITY {
 
 ---
 
-REFS {
-  skill_list  := skills/docs/list.md
-  notation    := md/notation.md
-  enforcement := md/EN.md
+REFS := {
+  EN.md    ← /agints commands, full routing table, installation guide
+  list.md  ← all available skills with trigger descriptions
 }
