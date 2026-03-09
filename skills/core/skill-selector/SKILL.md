@@ -56,7 +56,7 @@ PROCESS {
   5. ESCALATION_RULES:
        IF step involves testing → ensure systematic-debugging is available
        IF conflict unresolvable → flag for human review, do not guess
-  6. OUTPUT annotated plan + SKILL_GAPS (omit if empty)
+  6. OUTPUT annotated_plan + skill-proposals.md + skill-placement.log (omit artifacts if no gaps)
 }
 
 ---
@@ -101,9 +101,61 @@ SKILL_GAPS_FORMAT := {
 
 ---
 
+PROPOSAL_ARTIFACTS := {
+  skill-proposals.md {
+    location: same_dir_as_plan_file
+    format:   human_readable_markdown
+    purpose:  user_reviews_approves_rejects_changes_method
+    lifecycle: temporary → deleted after pass-2
+    fields_per_proposal: {
+      skill_name
+      needed_in: [microtask_ids]
+      why: one_line_rationale
+      creation_method: write | synthesize
+      approve: "[ ] yes  [ ] no"   ← user checks
+    }
+  }
+
+  skill-placement.log {
+    location: same_dir_as_plan_file
+    format:   SPEC_notation
+    purpose:  agent_internal_record_of_where_to_insert
+    lifecycle: temporary → deleted after pass-2
+    format: PLACEMENT_LOG := [
+      {skill: "<name>", microtasks: [ids], load: spec|capsule, priority: critical|standard|optional},
+    ]
+  }
+}
+
+PASS_2 := {
+  TRIGGER: user_has_reviewed_skill-proposals.md AND approved_skills_created
+
+  STEPS {
+    1. READ skill-proposals.md → collect approved := entries where "[x] yes"
+    2. READ skill-placement.log → load placement coordinates
+    3. FOR each approved skill:
+         find microtasks in placement log
+         INSERT USE_SKILL directive at logged position
+         FORMAT: "USE_SKILL: <name> LOAD: <level> PRIORITY: <priority>"
+    4. FOR each rejected skill:
+         skip → no insertion
+    5. DELETE skill-proposals.md AND skill-placement.log
+    6. REPORT: "Added N skills to M microtasks. Removed proposal artifacts."
+  }
+
+  FORBIDDEN := {
+    re_run_full_pass_1       ← use placement log, not re-analysis
+    insert_rejected_skills   ← user said no
+    leave_artifacts_behind   ← always delete after pass-2
+  }
+}
+
+---
+
 OUTPUT := {
-  annotated_plan   ← original plan with USE_SKILL directives in each step
-  skill_gaps_log   ← SKILL_GAPS block at end (omit if no gaps found)
+  annotated_plan          ← USE_SKILL directives injected per step
+  skill-proposals.md      ← IF gaps found: human-readable proposals (omit if no gaps)
+  skill-placement.log     ← IF gaps found: internal placement coordinates (omit if no gaps)
 }
 
 REFS := {

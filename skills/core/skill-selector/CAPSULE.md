@@ -23,17 +23,17 @@ CORE_RULES := {
 }
 
 PROCESS_HINT := {
-  1. read_full_plan
-  2. load_all_capsules (~15K tokens for 300 skills)
-  3. match_and_inject_per_step
-  4. detect_gaps
-  5. output_annotated_plan
+  pass-1: read_plan → load_capsules → match_inject_per_step → detect_gaps
+          → output: annotated_plan + skill-proposals.md + skill-placement.log (if gaps)
+  pass-2: (if proposals approved + skills created)
+          read_proposals → read_placement_log → insert_approved → delete_artifacts
 }
 
 SWITCH_TO := {
-  plan not written → writing-plans
-  library < 5 skills → skip; dispatch directly
-  session start → using-agints
+  plan not written                          → writing-plans
+  library < 5 skills                        → skip; dispatch directly
+  session start                             → using-agints
+  proposals_approved_skills_created         → skill-selector pass-2
 }
 RELATED := {
   writing-plans | subagent-driven-development | executing-plans | using-agints
