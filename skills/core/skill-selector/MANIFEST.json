@@ -1,0 +1,16 @@
+{
+  "name": "skill-selector",
+  "version": "1.0.0",
+  "level": "core",
+  "lifecycle": "experimental",
+  "capsule": "CAPSULE.md",
+  "stack": [],
+  "requires": ["writing-plans"],
+  "recommends": ["subagent-driven-development", "using-agints"],
+  "source": "original",
+  "origin": [
+    "AGIntS/design-conversation@2026-03-07"
+  ],
+  "frozen": false,
+  "platforms": ["claude-code"]
+}
