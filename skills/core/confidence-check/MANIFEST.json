@@ -1,0 +1,16 @@
+{
+  "name": "confidence-check",
+  "version": "1.0.0",
+  "level": "core",
+  "capsule": "CAPSULE.md",
+  "stack": [],
+  "requires": [],
+  "source": "synthesized",
+  "origin": [
+    "SuperClaude-Org/SuperClaude_Framework/.claude/skills/confidence-check@2025-11-14",
+    "majiayu000/claude-skill-registry/skills/other/faion-confidence-check@unknown",
+    "majiayu000/claude-skill-registry/skills/documents/confidence-check@unknown"
+  ],
+  "frozen": false,
+  "platforms": ["claude-code"]
+}

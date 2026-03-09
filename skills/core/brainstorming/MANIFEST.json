@@ -1,0 +1,14 @@
+{
+  "name": "brainstorming",
+  "version": "1.0.0",
+  "level": "core",
+  "stack": [],
+  "requires": [],
+  "source": "synthesized",
+  "origin": [
+    "superpowers/brainstorming@4.3.1",
+    "anthropic/feature-dev@1.0.0"
+  ],
+  "frozen": false,
+  "platforms": ["claude-code"]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "verification-before-completion",
+  "version": "1.0.0",
+  "level": "core",
+  "capsule": "CAPSULE.md",
+  "stack": [],
+  "requires": [],
+  "source": "synthesized",
+  "origin": [
+    "obra/superpowers/skills/verification-before-completion@2025-10",
+    "SuperClaude-Org/SuperClaude_Framework/src/superclaude/core/RULES.md@2025",
+    "cloudflare/workerd/.opencode/skills/verification-before-completion@2025"
+  ],
+  "frozen": false,
+  "platforms": ["claude-code"]
+}

@@ -110,7 +110,7 @@ REFS := {
   anthropic-best-practices.md   ← official Anthropic guidance (SPEC); -FULL.md = full
   persuasion-principles.md      ← compliance psychology (SPEC); -FULL.md = full + citations
   testing-skills-with-subagents.md ← pressure testing protocol (SPEC); -FULL.md = full
-  tests/pressure-scenarios.md   ← Red-фаза: готовые сценарии для тестирования
+  tests/pressure-scenarios.md   ← Red phase: ready-made scenarios for testing
   list.md                       ← related: test-driven-development | brainstorming |
                                             verification-before-completion | using-agints
 }

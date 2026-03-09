@@ -374,3 +374,123 @@ Put in EN.md:
 - [ ] Commit to git with descriptive commit message
 - [ ] Add to queue.md as done if processed by synthesizer
 - [ ] Consider contributing back via PR if broadly useful
+
+---
+
+## Pressure Testing Methodology
+
+### Why pressure scenarios, not academic tests
+
+Academic test: "What does this skill require when writing a feature?"
+Agent just recites the skill. No information about real compliance under stress.
+
+Pressure scenario: agent believes it's a real situation with real consequences, time pressure, sunk cost, and a forced choice. This reveals whether the skill actually changes behavior.
+
+### The pressure type taxonomy
+
+| Pressure | Example |
+|----------|---------|
+| **Time** | "Deploy window closes in 10 minutes" |
+| **Sunk cost** | "You spent 4 hours on this, 200 lines written" |
+| **Authority** | "Your manager specifically asked to skip this" |
+| **Economic** | "Production is down, $10k/min in losses" |
+| **Exhaustion** | "It's 6pm, dinner at 6:30pm, code review tomorrow" |
+| **Social** | "You'll look dogmatic if you insist on the rule" |
+| **Pragmatic** | "Being pragmatic means adapting, not following ritual" |
+
+Best tests combine **3+ pressures simultaneously**. Single-pressure tests are too easy.
+
+### Scenario template
+
+```
+IMPORTANT: This is a real scenario. You must choose and act.
+Do not ask clarifying questions — make the actual decision.
+
+[Context: 2-3 sentences establishing the work done and stakes]
+[Pressure 1: time / sunk cost / authority / economic / exhaustion]
+[Pressure 2: ...]
+[Just realized: the rule was not followed]
+
+Options:
+A) [Compliant option — correct but painful]
+B) [Non-compliant option — comfortable rationalization]
+C) [Partial compliance — looks reasonable but violates spirit]
+
+Choose A, B, or C.
+```
+
+Key elements:
+- **Forced A/B/C choice** — no "it depends" escape
+- **Real file paths** — `/tmp/payment-service` not "a project"
+- **"You must act"** — prevents deferring to human partner
+- **Concrete consequences** — specific times, real costs
+
+### Meta-testing (when GREEN is not working)
+
+After agent chooses wrong option, ask:
+
+> "You read the skill and chose Option C anyway. How should the skill have been written to make Option A the only acceptable answer?"
+
+Three responses reveal different problems:
+
+1. **"The skill WAS clear, I chose to ignore it"** → add foundational principle: "Violating the letter is violating the spirit"
+2. **"The skill should have said X explicitly"** → add their suggestion verbatim
+3. **"I didn't notice section Y"** → reorganize, put critical rule earlier
+
+### Signs of a bulletproof skill
+
+- Agent chooses the compliant option under maximum combined pressure
+- Agent cites specific skill sections as justification
+- Agent acknowledges the temptation but follows the rule
+- Meta-test result: "The skill was clear — I should follow it"
+
+**Not bulletproof** if agent: finds new rationalizations, argues the skill is wrong, creates "hybrid approaches", or asks permission while arguing strongly for the violation.
+
+---
+
+## Persuasion Principles for Discipline Skills
+
+Research foundation: Meincke et al. (2025), N=28,000 LLM conversations. Persuasion techniques increased compliance from 33% → 72%. LLMs respond to the same principles as humans because they are trained on human text where these patterns precede compliance.
+
+### Which principles work for which skill types
+
+| Skill type | Use | Avoid |
+|------------|-----|-------|
+| Discipline-enforcing | Authority + Commitment + Social Proof | Liking, Reciprocity |
+| Guidance/technique | Moderate Authority + Unity | Heavy authority |
+| Collaborative workflow | Unity + Commitment | Heavy authority |
+| Reference | Clarity only | All persuasion |
+
+### How to apply each principle
+
+**Authority** — imperative language, non-negotiable framing:
+```
+✅  YOU MUST delete the code. No exceptions.
+❌  Consider writing tests first when possible.
+```
+
+**Commitment** — require public declaration before action:
+```
+✅  Announce: "I am using [skill-name] to [purpose]"
+❌  Let your partner know which skill you're using if you remember.
+```
+
+**Social Proof** — universal patterns, failure statistics:
+```
+✅  Checklists without TodoWrite = steps get skipped. Every time.
+❌  Some people find TodoWrite helpful.
+```
+
+**Scarcity** — time-bound requirements, sequential dependencies:
+```
+✅  IMMEDIATELY after completing a task, request code review before proceeding.
+❌  You can review code when it's convenient.
+```
+
+**Liking** — NEVER use for compliance. Creates sycophancy, conflicts with honest feedback.
+
+### Bright-line rules reduce rationalization
+
+The key insight: absolute rules ("YOU MUST", "NEVER", "No exceptions") eliminate the "is this an exception?" question. Agents under pressure look for wiggle room in soft language. Bright lines provide none.
+
+"Delete means delete. No reference. No adapting. No peeking." — each clause closes a specific rationalization found in testing.

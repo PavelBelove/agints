@@ -1,0 +1,21 @@
+{
+  "name": "subagent-driven-development",
+  "version": "1.0.0",
+  "level": "core",
+  "capsule": "CAPSULE.md",
+  "stack": [],
+  "requires": [
+    "using-git-worktrees",
+    "writing-plans"
+  ],
+  "source": "synthesized",
+  "origin": [
+    "obra/superpowers/skills/subagent-driven-development@2025-10-03",
+    "obra/superpowers-skills/skills/meta/testing-skills-with-subagents@2025-10-03",
+    "obra/superpowers/skills/dispatching-parallel-agents@2025-10-03",
+    "obra/superpowers/skills/requesting-code-review@2025-10-03",
+    "SuperClaude-Org/SuperClaude_Framework/src/superclaude/commands/pm.md@2025"
+  ],
+  "frozen": false,
+  "platforms": ["claude-code"]
+}

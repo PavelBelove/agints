@@ -1,0 +1,16 @@
+{
+  "name": "test-driven-development",
+  "version": "1.1.0",
+  "level": "core",
+  "stack": [],
+  "requires": [],
+  "source": "synthesized",
+  "origin": [
+    "superpowers/test-driven-development@4.3.1",
+    "obra/superpowers-skills/testing/test-driven-development@3.1.0",
+    "affaan-m/everything-claude-code/tdd-workflow@2026-03-05",
+    "or-ituran/claude-tdd-skill@2026-02-02"
+  ],
+  "frozen": false,
+  "platforms": ["claude-code"]
+}
