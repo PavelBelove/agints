@@ -1,0 +1,13 @@
+{
+  "name": "writing-microtasks",
+  "version": "1.0.0",
+  "level": "core",
+  "capsule": "CAPSULE.md",
+  "stack": [],
+  "requires": ["writing-plans"],
+  "source": "original",
+  "origin": [],
+  "lifecycle": "experimental",
+  "frozen": false,
+  "platforms": ["claude-code"]
+}
