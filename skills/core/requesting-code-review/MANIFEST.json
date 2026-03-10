@@ -1,0 +1,17 @@
+{
+  "name": "requesting-code-review",
+  "version": "1.0.0",
+  "level": "core",
+  "capsule": "CAPSULE.md",
+  "stack": [],
+  "requires": [],
+  "source": "synthesized",
+  "origin": [
+    "obra/superpowers-skills/skills/collaboration/requesting-code-review/SKILL.md@v1.1.0",
+    "obra/superpowers/skills/requesting-code-review/SKILL.md@main",
+    "majiayu000/claude-skill-registry/other/requesting-code-review/SKILL.md@unknown",
+    "duthaho/claudekit/.claude/agents/code-reviewer.md@unknown"
+  ],
+  "frozen": false,
+  "platforms": ["claude-code"]
+}

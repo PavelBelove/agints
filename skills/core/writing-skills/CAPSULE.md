@@ -31,6 +31,7 @@ SWITCH_TO := {
   pressure_test_skill          → testing-skills-with-subagents
   need_compliance_patterns     → persuasion-principles
   creating_implementation_plan → writing-plans
+  skill_exists_in_ecosystem    → synthesizing-skills  ← research-based synthesis instead
 }
 
-RELATED := { FULL.md | anthropic-best-practices.md | persuasion-principles.md | testing-skills-with-subagents.md | test-driven-development | brainstorming }
+RELATED := { FULL.md | anthropic-best-practices.md | persuasion-principles.md | testing-skills-with-subagents.md | test-driven-development | brainstorming | synthesizing-skills }

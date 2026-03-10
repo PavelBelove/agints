@@ -30,6 +30,8 @@ SWITCH_TO := {
   bug                 → systematic-debugging
   plan_needed         → writing-plans
   plan_has_microtasks → skill-selector
+  creating_new_skill_from_scratch   → writing-skills
+  creating_new_skill_from_research  → synthesizing-skills
 }
 
-RELATED := { list.md }
+RELATED := { list.md | writing-skills | synthesizing-skills | skill-selector }

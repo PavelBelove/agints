@@ -1,0 +1,14 @@
+{
+  "name": "writing-plans",
+  "version": "1.0.0",
+  "level": "core",
+  "capsule": "CAPSULE.md",
+  "stack": [],
+  "requires": [],
+  "source": "synthesized",
+  "origin": [
+    "obra/superpowers/skills/writing-plans/SKILL.md@main"
+  ],
+  "frozen": false,
+  "platforms": ["claude-code"]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "executing-plans",
+  "version": "1.0.0",
+  "level": "core",
+  "capsule": "CAPSULE.md",
+  "stack": [],
+  "requires": [],
+  "source": "synthesized",
+  "origin": [
+    "obra/superpowers-skills/skills/collaboration/executing-plans/SKILL.md@v2.2.0",
+    "obra/superpowers/skills/executing-plans/SKILL.md@main",
+    "NickCrew/claude-cortex/skills/collaboration/executing-plans/SKILL.md@unknown"
+  ],
+  "frozen": false,
+  "platforms": ["claude-code"]
+}

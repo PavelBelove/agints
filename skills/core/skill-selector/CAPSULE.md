@@ -34,7 +34,9 @@ SWITCH_TO := {
   library < 5 skills                        → skip; dispatch directly
   session start                             → using-agints
   proposals_approved_skills_created         → skill-selector pass-2
+  proposal needs research-based creation    → synthesizing-skills
+  proposal needs fast scratch creation      → writing-skills
 }
 RELATED := {
-  writing-plans | subagent-driven-development | executing-plans | using-agints
+  writing-plans | subagent-driven-development | executing-plans | using-agints | writing-skills | synthesizing-skills
 }

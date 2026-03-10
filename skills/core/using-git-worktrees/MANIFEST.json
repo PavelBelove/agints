@@ -1,0 +1,16 @@
+{
+  "name": "using-git-worktrees",
+  "version": "1.0.0",
+  "level": "core",
+  "capsule": "CAPSULE.md",
+  "stack": [],
+  "requires": [],
+  "source": "synthesized",
+  "origin": [
+    "obra/superpowers/skills/using-git-worktrees/SKILL.md@main",
+    "majiayu000/claude-skill-registry/git-worktree-workflow@2026-01-02",
+    "alirezarezvani/claude-skills/git-worktree-manager@unknown"
+  ],
+  "frozen": false,
+  "platforms": ["claude-code"]
+}

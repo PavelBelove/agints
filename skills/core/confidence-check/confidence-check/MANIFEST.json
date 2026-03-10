@@ -1,0 +1,17 @@
+{
+  "name": "confidence-check",
+  "version": "1.0.0",
+  "level": "core",
+  "capsule": "CAPSULE.md",
+  "stack": [],
+  "requires": [],
+  "source": "synthesized",
+  "origin": [
+    "SuperClaude-Org/SuperClaude_Framework/src/superclaude/pm_agent/confidence.py@2025-11-12",
+    "SuperClaude-Org/SuperClaude_Framework/PLANNING.md@2025-11-12",
+    "superclaude/skills/confidence-check/SKILL.md@2025-10-21",
+    "majiayu000/claude-skill-registry/confidence-check/SKILL.md@unknown"
+  ],
+  "frozen": false,
+  "platforms": ["claude-code"]
+}

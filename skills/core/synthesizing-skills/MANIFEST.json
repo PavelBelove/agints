@@ -1,0 +1,15 @@
+{
+  "name": "synthesizing-skills",
+  "version": "1.0.0",
+  "level": "core",
+  "capsule": "CAPSULE.md",
+  "stack": [],
+  "requires": [],
+  "source": "original",
+  "origin": [
+    "local:synthesizer/task-template.md",
+    "local:synthesizer/ecosystem-map.md"
+  ],
+  "frozen": false,
+  "platforms": ["claude-code"]
+}

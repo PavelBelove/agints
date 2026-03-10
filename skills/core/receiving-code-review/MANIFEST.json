@@ -1,0 +1,17 @@
+{
+  "name": "receiving-code-review",
+  "version": "1.0.0",
+  "level": "core",
+  "capsule": "CAPSULE.md",
+  "stack": [],
+  "requires": [],
+  "source": "synthesized",
+  "origin": [
+    "obra/superpowers-skills/skills/collaboration/receiving-code-review/SKILL.md@v1.1.0",
+    "obra/superpowers/skills/receiving-code-review/SKILL.md@main",
+    "axiomantic/spellbook/skills/receiving-code-review/SKILL.md@unknown",
+    "oaknational/oak-open-curriculum-ecosystem/.agent/skills/receiving-code-review/SKILL.md@unknown"
+  ],
+  "frozen": false,
+  "platforms": ["claude-code"]
+}
