@@ -12,5 +12,8 @@
     "or-ituran/claude-tdd-skill@2026-02-02"
   ],
   "frozen": false,
-  "platforms": ["claude-code"]
+  "lifecycle": "stable",
+  "platforms": [
+    "claude-code"
+  ]
 }

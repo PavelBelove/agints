@@ -12,5 +12,8 @@
     "majiayu000/claude-skill-registry/skills/documents/confidence-check@unknown"
   ],
   "frozen": false,
-  "platforms": ["claude-code"]
+  "lifecycle": "stable",
+  "platforms": [
+    "claude-code"
+  ]
 }

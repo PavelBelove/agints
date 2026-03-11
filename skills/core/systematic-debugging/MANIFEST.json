@@ -3,12 +3,17 @@
   "version": "1.0.0",
   "level": "core",
   "stack": [],
-  "requires": ["test-driven-development"],
+  "requires": [
+    "test-driven-development"
+  ],
   "source": "synthesized",
   "origin": [
     "obra/superpowers@2025-10-03",
     "obra/superpowers-skills/systematic-debugging@v2.1.0"
   ],
   "frozen": false,
-  "platforms": ["claude-code"]
+  "lifecycle": "stable",
+  "platforms": [
+    "claude-code"
+  ]
 }

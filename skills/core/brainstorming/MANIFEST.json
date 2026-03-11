@@ -10,5 +10,8 @@
     "anthropic/feature-dev@1.0.0"
   ],
   "frozen": false,
-  "platforms": ["claude-code"]
+  "lifecycle": "stable",
+  "platforms": [
+    "claude-code"
+  ]
 }

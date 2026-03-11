@@ -13,5 +13,8 @@
     "duthaho/claudekit/.claude/agents/code-reviewer.md@unknown"
   ],
   "frozen": false,
-  "platforms": ["claude-code"]
+  "lifecycle": "stable",
+  "platforms": [
+    "claude-code"
+  ]
 }

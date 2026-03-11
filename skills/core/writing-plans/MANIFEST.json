@@ -10,5 +10,8 @@
     "obra/superpowers/skills/writing-plans/SKILL.md@main"
   ],
   "frozen": false,
-  "platforms": ["claude-code"]
+  "lifecycle": "stable",
+  "platforms": [
+    "claude-code"
+  ]
 }

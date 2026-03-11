@@ -12,5 +12,8 @@
     "cloudflare/workerd/.opencode/skills/verification-before-completion@2025"
   ],
   "frozen": false,
-  "platforms": ["claude-code"]
+  "lifecycle": "stable",
+  "platforms": [
+    "claude-code"
+  ]
 }

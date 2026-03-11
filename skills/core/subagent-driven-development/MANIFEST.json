@@ -17,5 +17,8 @@
     "SuperClaude-Org/SuperClaude_Framework/src/superclaude/commands/pm.md@2025"
   ],
   "frozen": false,
-  "platforms": ["claude-code"]
+  "lifecycle": "stable",
+  "platforms": [
+    "claude-code"
+  ]
 }

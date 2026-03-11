@@ -3,12 +3,17 @@
   "version": "1.1.0",
   "level": "core",
   "stack": [],
-  "requires": ["test-driven-development"],
+  "requires": [
+    "test-driven-development"
+  ],
   "source": "synthesized",
   "origin": [
     "superpowers/writing-skills@4.3.1",
     "anthropic/best-practices@2026"
   ],
   "frozen": false,
-  "platforms": ["claude-code"]
+  "lifecycle": "stable",
+  "platforms": [
+    "claude-code"
+  ]
 }

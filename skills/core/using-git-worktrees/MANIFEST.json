@@ -12,5 +12,8 @@
     "alirezarezvani/claude-skills/git-worktree-manager@unknown"
   ],
   "frozen": false,
-  "platforms": ["claude-code"]
+  "lifecycle": "stable",
+  "platforms": [
+    "claude-code"
+  ]
 }

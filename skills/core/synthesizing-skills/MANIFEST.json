@@ -11,5 +11,8 @@
     "local:synthesizer/ecosystem-map.md"
   ],
   "frozen": false,
-  "platforms": ["claude-code"]
+  "lifecycle": "stable",
+  "platforms": [
+    "claude-code"
+  ]
 }

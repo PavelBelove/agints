@@ -10,6 +10,9 @@
     "superclaude/FLAGS.md@4.2.0"
   ],
   "frozen": false,
+  "lifecycle": "stable",
   "description": "Core dispatcher: enforces skill-check discipline, detects project stack, routes tasks to appropriate skills.",
-  "platforms": ["claude-code"]
+  "platforms": [
+    "claude-code"
+  ]
 }

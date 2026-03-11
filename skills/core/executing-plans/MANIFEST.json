@@ -12,5 +12,8 @@
     "NickCrew/claude-cortex/skills/collaboration/executing-plans/SKILL.md@unknown"
   ],
   "frozen": false,
-  "platforms": ["claude-code"]
+  "lifecycle": "stable",
+  "platforms": [
+    "claude-code"
+  ]
 }
