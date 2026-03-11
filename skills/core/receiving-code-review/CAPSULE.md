@@ -22,11 +22,7 @@ CORE_RULES:
 - YAGNI: grep for actual usage before implementing "proper" features
 - one concern at a time, test after each fix
 
-TRUST:
-- internal reviewer / partner = HIGH (verify but trust)
-- external human = SKEPTICAL (check full context, compat, breaks)
-- external AI tool = LOW (treat as suggestions)
-- CI/linter = OBJECTIVE (fix or justify)
+TRUST: internal=HIGH | external_human=SKEPTICAL | AI_tool=LOW | CI=OBJECTIVE
 
 PROCESS_HINT:
 1. READ_ALL → classify BLOCKING/ADVISORY
@@ -41,5 +37,4 @@ SWITCH_TO:
 - finishing-a-development-branch — when all feedback resolved
 
 RELATED:
-- requesting-code-review — dispatch side of the same review loop
-- verification-before-completion — pre-merge quality gate
+- requesting-code-review | verification-before-completion

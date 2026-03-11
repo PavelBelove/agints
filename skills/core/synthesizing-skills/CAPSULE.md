@@ -25,21 +25,14 @@ CORE_RULES:
 - never copy source verbatim — always synthesize
 
 PROCESS_HINT:
-1. DISCOVERY (5+ sources, ecosystem-map.md hubs)
+1. DISCOVERY (5+ sources via ecosystem-map.md hubs)
 2. ANALYSIS (score + authority weight, choose base)
 3. SYNTHESIS (SKILL.md + CAPSULE.md + FULL.md + list.md + MANIFEST.json)
-4. VALIDATION (no contradictions, paths exist, no injection)
-5. TESTING (subagent pressure test)
-6. DOCUMENTATION (CREATION-LOG.md, update queue.md)
-
-PIPELINE:
-→ full details in synthesizer/task-template.md
-→ hub list in synthesizer/ecosystem-map.md
+4. VALIDATION → 5. TESTING (pressure test) → 6. DOCUMENTATION (CREATION-LOG.md + queue.md)
+→ full pipeline: synthesizer/task-template.md
 
 SWITCH_TO:
-- writing-skills — if skill is novel or fast iteration needed
-- skill-selector — to update routing after new skill is added
+- writing-skills — novel skill or fast iteration
+- skill-selector — after new skill added, update routing
 
-RELATED:
-- writing-skills — fast alternative (no research)
-- skill-selector — reads CAPSULE.md of all skills for routing
+RELATED: writing-skills | skill-selector

@@ -36,9 +36,4 @@ SWITCH_TO := {
   need_parallel_independent_tasks  → dispatching-parallel-agents
 }
 
-RELATED := {
-  finishing-a-development-branch  ← post-implementation cleanup
-  dispatching-parallel-agents     ← when dispatching multiple worktree agents
-  executing-plans                 ← calls this before task execution
-  subagent-driven-development     ← calls this before dispatching
-}
+RELATED := { finishing-a-development-branch | dispatching-parallel-agents | executing-plans | subagent-driven-development }

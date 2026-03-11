@@ -37,6 +37,4 @@ SWITCH_TO:
 - finishing-a-development-branch — at the end (always)
 
 RELATED:
-- writing-plans — creates the plan this skill executes
-- subagent-driven-development — alternative execution pattern (subagents per task)
-- confidence-check — run before starting implementation of each task
+- writing-plans | subagent-driven-development | confidence-check

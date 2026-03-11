@@ -37,6 +37,4 @@ SWITCH_TO := {
   proposal needs research-based creation    → synthesizing-skills
   proposal needs fast scratch creation      → writing-skills
 }
-RELATED := {
-  writing-plans | subagent-driven-development | executing-plans | using-agints | writing-skills | synthesizing-skills
-}
+RELATED := { writing-plans | subagent-driven-development | executing-plans | using-agints | writing-skills | synthesizing-skills }

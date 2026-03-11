@@ -21,12 +21,6 @@ CORE_RULES:
 - After Option 1 merge: MUST re-run tests on merged result
 - No force-push without explicit user request
 
-OPTIONS:
-1. Merge locally → tests + cleanup worktree
-2. Push + Create PR → keep worktree
-3. Keep as-is → keep worktree
-4. Discard → typed confirmation + cleanup worktree
-
 PROCESS_HINT:
 1. VERIFY_TESTS (fail → STOP)
 2. DETERMINE_BASE_BRANCH
@@ -39,6 +33,4 @@ SWITCH_TO:
 - using-git-worktrees — if new worktree needed for next feature
 
 RELATED:
-- subagent-driven-development — calls this at final step
-- executing-plans — calls this at final step
-- using-git-worktrees — complementary (worktree creation)
+- subagent-driven-development | executing-plans | using-git-worktrees

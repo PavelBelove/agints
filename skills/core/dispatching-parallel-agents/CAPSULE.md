@@ -37,5 +37,4 @@ SWITCH_TO:
 - executing-plans — broader orchestration context
 
 RELATED:
-- subagent-driven-development — dispatch pattern within SDD
-- requesting-code-review — review after parallel implementation merges
+- subagent-driven-development | requesting-code-review
